@@ -9,8 +9,8 @@ function Header(props) {
                     <nav className="navbar navbar-expand-lg navbar-light p-0">
                         <Link to={`/`}>
                             <a className="navbar-brand">
-                            <br></br>
-                            <h2 className="text-black">Shopping</h2>
+                                <br></br>
+                                <h2 className="text-black">Shopping</h2>
                             </a>
                         </Link>
 
@@ -26,8 +26,13 @@ function Header(props) {
                                 <Link to={`/contact`}><a className="nav-item nav-link">Contact</a></Link>
                                 <Link to={`/cart`}><a className="nav-item nav-link">Cart</a></Link>
                             </div>
-                            <Link to={`/register`}>
-                                <a className="btn btn-dark py-2 px-4 d-none d-lg-inline-block">Sing in</a>
+                            <Link to={`/register`} className="mx-2">
+                                <a className="btn btn-dark py-2 px-4 d-none d-lg-inline-block">Sign Up</a>
+                            </Link>
+                            <span className="text-muted">|</span> {/* Separator */}
+                            <Link to={`/login`} className="mx-2">
+                                <div style={{ color: 'black' }}>Sign In</div>
+
                             </Link>
                         </div>
                     </nav>

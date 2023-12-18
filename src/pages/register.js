@@ -1,5 +1,6 @@
 import React from 'react';
 import Main from '../layouts/main';
+import { Link } from "react-router-dom";
 
 function Register() {
     return (
@@ -65,10 +66,11 @@ function Register() {
 
 
 
-
+                            <Link to={`/`}>
                             <div class="button">
                                 <input id="submitBtn" type="submit" value="Register"></input>
                             </div>
+                            </Link>
                         </div>
 
                     </form >
