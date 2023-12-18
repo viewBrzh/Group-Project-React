@@ -30,8 +30,8 @@ function App() {
               <h3 className="fw-light text-white animated slideInRight">Natural & Organic</h3>
               <h1 className="display-4 text-white animated slideInRight">Product <span className="fw-light text-dark">Decorations</span> For Beauty</h1>
               <p className="text-white mb-4 animated slideInRight">Choosing beautiful accessories is not just about decorating yourself. But it is also an expression of your taste and personality. If you have jewelry that looks good It not only increases your beauty and excitement. But they can also be culturally valuable items and have important meanings..</p>
-              <Link to="#" className="btn btn-dark py-2 px-4 me-3 animated slideInRight">Shop Now</Link>
-              <Link to="#" className="btn btn-outline-dark py-2 px-4 animated slideInRight">Contact Us</Link>
+              <Link to={`/product`} className="btn btn-dark py-2 px-4 me-3 animated slideInRight">Shop Now</Link>
+              <Link to={`/contact`} className="btn btn-outline-dark py-2 px-4 animated slideInRight">Contact Us</Link>
             </div>
           </div>
         </div>
