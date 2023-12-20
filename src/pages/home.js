@@ -23,7 +23,7 @@ function App() {
   {/*Payment Methods*/}
   const paymentMethods = [
     { id: 1, name: 'True Wallet' },
-    { id: 2, name: 'Bank Transfer' },
+    { id: 2, name: 'Credits Card' },
     { id: 3, name: 'Cash on Delivery' },
   ];
 

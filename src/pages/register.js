@@ -23,8 +23,8 @@ function Register() {
                                     <input type="email" className="form-control" id="email" placeholder="Input your Email" ></input>
                                 </div>
                                 <div className="input-box">
-                                    <label htmlFor="sPhone"> Phone Number </label>
-                                    <input type="tel" className="form-control" id="sPhone" placeholder="Input your phone number " ></input>
+                                    <label htmlFor="sPhone"> Password </label>
+                                    <input type="tel" className="form-control" id="sPhone" placeholder="Input your Password" ></input>
                                 </div>
                             </div>
 
