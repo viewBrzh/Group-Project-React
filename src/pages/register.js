@@ -66,7 +66,7 @@ function Register() {
 
 
 
-                            <Link to={`/`}>
+                            <Link to={`/login`}>
                             <div class="button">
                                 <input id="submitBtn" type="submit" value="Register"></input>
                             </div>
