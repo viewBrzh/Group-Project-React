@@ -20,6 +20,13 @@ function App() {
       .then((json) => setRac(json));
   }, []);
 
+  {/*Payment Methods*/}
+  const paymentMethods = [
+    { id: 1, name: 'True Wallet' },
+    { id: 2, name: 'Bank Transfer' },
+    { id: 3, name: 'Cash on Delivery' },
+  ];
+
   return (
     <Main>
       {/* Hero Start */}
@@ -30,14 +37,14 @@ function App() {
               <h3 className="fw-light text-white animated slideInRight">Natural & Organic</h3>
               <h1 className="display-4 text-white animated slideInRight">Product <span className="fw-light text-dark">Decorations</span> For Beauty</h1>
               <p className="text-white mb-4 animated slideInRight">Choosing beautiful accessories is not just about decorating yourself. But it is also an expression of your taste and personality. If you have jewelry that looks good It not only increases your beauty and excitement. But they can also be culturally valuable items and have important meanings..</p>
-              <Link to={`/product`} className="btn btn-dark py-2 px-4 me-3 animated slideInRight">Shop Now</Link>
-              <Link to={`/contact`} className="btn btn-outline-dark py-2 px-4 animated slideInRight">Contact Us</Link>
+              <Link to="#" className="btn btn-dark py-2 px-4 me-3 animated slideInRight">Shop Now</Link>
+              <Link to="#" className="btn btn-outline-dark py-2 px-4 animated slideInRight">Contact Us</Link>
             </div>
           </div>
         </div>
       </div>
       {/* Hero End */}
-      
+
       {/* Product Start */}
       <div className="container-fluid py-5">
         <div className="container">
@@ -46,51 +53,65 @@ function App() {
             <p className="mb-5">There are many products that you will be interested in. and hurry up and order now.</p>
           </div>
           <div style={{ padding: '16px', maxHeight: '450px' }}>
-          <div className="row g-4 d-flex flex-wrap">
-            {/* Render your product items here */}
-            {data.map((product, index) => (
-              <div className="col-md-3 flex-grow-1" key={index}>
-                <div className="card" style={{height:'500px'}}>
-                  <img src={product.image} className="card-img-top" alt={product.title} style={{height: '250px'}}/>
-                  <div className="card-body">
-                    <h5 className="card-title">{product.title}</h5>
-                    <p className="card-text">Price: ${product.price}</p>
+            <div className="row g-4 d-flex flex-wrap">
+              {/* Render your product items here */}
+              {data.map((product, index) => (
+                <div className="col-md-3 flex-grow-1" key={index}>
+                  <div className="card" style={{ height: '500px' }}>
+                    <img src={product.image} className="card-img-top" alt={product.title} style={{ height: '250px' }} />
+                    <div className="card-body">
+                      <h5 className="card-title">{product.title}</h5>
+                      <p className="card-text">Price: ${product.price}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
       {/* Product End */}
 
-       {/* Product Start */}
-       <div className="container-fluid py-5">
+      {/* Product Start */}
+      <div className="container-fluid py-5">
         <div className="container">
           <div className="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style={{ maxWidth: '600px' }}>
             <h1 className="text-primary mb-3"><span className="fw-light text-dark">Popular product list </span> The most beautiful jewelry</h1>
             <p className="mb-5">Decorations that you will be interested in and impressed by it.</p>
           </div>
           <div style={{ padding: '16px', maxHeight: '450px' }}>
-          <div className="row g-4 d-flex flex-wrap">
-            {/* Render your product items here */}
-            {rec.map((item, index) => (
-              <div className="col-md-3 flex-grow-1" key={index}>
-                <div className="card" style={{height:'500px'}}>
-                  <img src={item.image} className="card-img-top" alt={item.title} style={{height: '250px'}} />
-                  <div className="card-body">
-                    <h5 className="card-title">{item.title}</h5>
-                    <p className="card-text">Price: ${item.price}</p>
+            <div className="row g-4 d-flex flex-wrap">
+              {/* Render your product items here */}
+              {rec.map((item, index) => (
+                <div className="col-md-3 flex-grow-1" key={index}>
+                  <div className="card" style={{ height: '500px' }}>
+                    <img src={item.image} className="card-img-top" alt={item.title} style={{ height: '250px' }} />
+                    <div className="card-body">
+                      <h5 className="card-title">{item.title}</h5>
+                      <p className="card-text">Price: ${item.price}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
       {/* Product End */}
+
+      {/*Render Payment Options*/}
+      <div class="container">
+        <div className="my-5">
+          <h2 className="text-primary mb-3">Payment Methods</h2>
+          <ul className="list-group">
+            {paymentMethods.map((method) => (
+              <li key={method.id} className="list-group-item">
+                {method.name}
+              </li>
+            ))}
+          </ul>
+        </div></div>
+      );
     </Main>
   );
 }
